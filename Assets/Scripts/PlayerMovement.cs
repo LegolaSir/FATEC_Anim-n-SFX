@@ -4,10 +4,29 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private int speed = 5;
+    [Header("Speed Entry")]
+    [SerializeField] private float speed = 5;
+
+    private float tmp;
+
+    /* Unity Methods */
+    private void Start()
+    {
+        tmp = Time.fixedDeltaTime;
+    }
 
     private void FixedUpdate()
     {
-        this.transform.Translate(Input.GetAxis("Vertical") * Time.fixedDeltaTime * speed, 0, 0);
+        Movement();
+    }
+
+    /* Custom Methods */
+    public void Movement()
+    {
+        float vInput = Input.GetAxis("Vertical");
+        float hInput = Input.GetAxis("Horizontal");
+        Vector3 direction = new Vector3(vInput, 0, -hInput);
+
+        transform.Translate(speed * tmp * direction);
     }
 }
