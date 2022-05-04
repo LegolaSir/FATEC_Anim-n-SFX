@@ -288,6 +288,7 @@ GameObject:
   - component: {fileID: 492850426}
   - component: {fileID: 492850425}
   - component: {fileID: 492850424}
+  - component: {fileID: 492850428}
   m_Layer: 0
   m_Name: Red Button
   m_TagString: Untagged
@@ -371,6 +372,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &492850428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492850423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 129b8fabd64d8b74a916c0022f449aa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 1620904609}
 --- !u!1 &497911411
 GameObject:
   m_ObjectHideFlags: 0
@@ -1639,7 +1653,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1620904603}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: fe151f00169cc9b4ebe89aa9475525e0, type: 2}
   m_CullingMode: 0
