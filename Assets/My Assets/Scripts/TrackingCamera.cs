@@ -6,6 +6,7 @@ public class TrackingCamera : MonoBehaviour
 {
     [Header("Player GameObject")]
     [SerializeField] private Transform target;
+    [SerializeField] private Transform cameraPos;
 
     private Vector3 offset;
 
@@ -14,8 +15,9 @@ public class TrackingCamera : MonoBehaviour
         CalculateOffset();
     }
 
-    private void Update()
+    private void LateUpdate()
     {
+        //transform.position = cameraPos.position;
         transform.position = target.position + offset;
     }
 

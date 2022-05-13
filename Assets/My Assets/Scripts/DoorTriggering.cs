@@ -15,7 +15,7 @@ public class DoorTriggering : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.name == "Player")
+        if(other.gameObject.tag == "Player")
         {
             anim.SetBool("IsNear", true);
         }
@@ -23,7 +23,7 @@ public class DoorTriggering : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.name == "Player")
+        if (other.gameObject.tag == "Player")
         {
             anim.SetBool("IsNear", false);
         }
